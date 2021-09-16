@@ -1,7 +1,7 @@
 import './App.css';
 //import React, {useEffect, useState} from 'react';
 //import RoomContainer from './components/RoomContainer';
-import RoomPage from './components/RoomPage';
+import RoomPage from './components/Rooms/RoomPage';
 
 function App() {
   // const [showForm, setShowForm] = useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 import button from 'react-bootstrap/Button';
-import '../App.css';
+import '../../App.css';
 
 function RoomCard({indRoom,onDeleteRoom}) {
     const {id,room} = indRoom;
