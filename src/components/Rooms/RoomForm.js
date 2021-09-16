@@ -42,6 +42,7 @@ function RoomForm({onAddRoom}) {
                 placeholder="Enter room name"
                 />
                 <br />
+                <br />
                 <input 
                 name="submit"
                 value="+"
