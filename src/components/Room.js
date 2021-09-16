@@ -18,7 +18,7 @@ function RoomCard({indRoom,onDeleteRoom}) {
     return (
         <div>
             <h4>{room}</h4>
-            <button type="button" className="btn btn-default btn-circle" onClick={handleDeleteClick}>X</button>
+            <button type="button" className="btn btn-warning btn-circle btn-xl" onClick={handleDeleteClick}>X</button>
         </div>
         );
     };
