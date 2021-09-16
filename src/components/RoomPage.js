@@ -12,9 +12,9 @@ function RoomPage() {
     .then(setRooms);
   },[]);
 
-  function handleClick() {
+/*   function handleClick() {
     setShowForm((showForm) => !showForm);
-  }
+  } */
 
   function handleAddRoom(newRoom) {
     setRooms([...rooms, newRoom]);
@@ -28,10 +28,11 @@ function RoomPage() {
   return (
     <main>
       <header>
-        {showForm ? <RoomForm onAddRoom={handleAddRoom} /> : null}
+        <RoomForm onAddRoom={handleAddRoom}/>
+{/*         {showForm ? <RoomForm onAddRoom={handleAddRoom} /> : null}
         <div>
           <button onClick={handleClick}>Add a room</button>
-        </div>
+        </div> */}
       </header>
       <RoomContainer 
       rooms={rooms}
