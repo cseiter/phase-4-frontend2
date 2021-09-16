@@ -18,7 +18,7 @@ function RoomForm({onAddRoom}) {
 
         const newRoom = {...formData};
 
-        fetch('https://radiant-waters-01618.herokuapp.com/rooms/', {
+        fetch('https://radiant-waters-01618.herokuapp.com/rooms', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
