@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import RoomContainer from './components/RoomContainer';
 
 function App() {
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
   const [rooms,setRooms] = useState([]);
 
   useEffect(() => {
@@ -12,9 +12,9 @@ function App() {
     .then(setRooms);
   },[]);
 
-  function handleClick() {
-    setShowForm((showForm) => !showForm);
-  }
+//  function handleClick() {
+//    setShowForm((showForm) => !showForm);
+//  }
 
   function handleDeleteRoom(roomToDelete) {
     const updatedRooms = rooms.filter((room) => room.id !== roomToDelete.id);
