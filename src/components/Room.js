@@ -1,4 +1,6 @@
 import React from 'react';
+import button from 'react-bootstrap/Button';
+import '../App.css';
 
 function RoomCard({indRoom,onDeleteRoom}) {
     const {id,room} = indRoom;
@@ -16,7 +18,7 @@ function RoomCard({indRoom,onDeleteRoom}) {
     return (
         <div>
             <h4>{room}</h4>
-            <button onClick={handleDeleteClick}>Delete Room</button>
+            <button type="button" className="btn btn-default btn-circle" onClick={handleDeleteClick}>X</button>
         </div>
         );
     };
