@@ -4,7 +4,7 @@ function RoomItem({indRoom,onDeleteRoom}) {
     const {id,room} = indRoom;
 
     function handleDeleteClick() {
-        fetch('https://radiant-waters-01618.herokuapp.com/rooms/${id}', {
+        fetch(`https://radiant-waters-01618.herokuapp.com/rooms/${id}`, {
             method: "DELETE",
     })
     .then((r) => r.json())

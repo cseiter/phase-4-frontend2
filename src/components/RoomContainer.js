@@ -5,7 +5,7 @@ function RoomContainer( {rooms, onDeleteRoom}) {
     const RoomItems = rooms.map((room) => (
         <RoomItem
             key={room.id}
-            badge={room}
+            indRoom={room}
             onDeleteRoom={onDeleteRoom}
         />
     ));
@@ -13,7 +13,7 @@ function RoomContainer( {rooms, onDeleteRoom}) {
     return (
         <section>
             <h1>Rooms</h1>
-            <ul>{RoomItems}</ul>
+            {RoomItems}
         </section>
     );
 }
