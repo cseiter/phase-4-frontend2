@@ -3,7 +3,6 @@ import RoomContainer from './RoomContainer';
 import RoomForm from './RoomForm';
 
 function RoomPage() {
-//  const [showForm, setShowForm] = useState(false);
   const [rooms,setRooms] = useState([]);
 
   useEffect(() => {
@@ -11,10 +10,6 @@ function RoomPage() {
     .then((r) => r.json())
     .then(setRooms);
   },[]);
-
-/*   function handleClick() {
-    setShowForm((showForm) => !showForm);
-  } */
 
   function handleAddRoom(newRoom) {
     setRooms([...rooms, newRoom]);
@@ -29,10 +24,6 @@ function RoomPage() {
     <main>
       <header>
         <RoomForm onAddRoom={handleAddRoom}/>
-{/*         {showForm ? <RoomForm onAddRoom={handleAddRoom} /> : null}
-        <div>
-          <button onClick={handleClick}>Add a room</button>
-        </div> */}
       </header>
       <RoomContainer 
       rooms={rooms}
