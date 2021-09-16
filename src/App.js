@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import RoomContainer from './components/RoomContainer';
@@ -24,7 +23,6 @@ function App() {
 
   return (
     <div className="App">
-      Hello
       <main>
         <RoomContainer 
         rooms={rooms}
