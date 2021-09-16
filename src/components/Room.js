@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RoomItem({indRoom,onDeleteRoom}) {
+function RoomCard({indRoom,onDeleteRoom}) {
     const {id,room} = indRoom;
 
     function handleDeleteClick() {
@@ -21,4 +21,4 @@ function RoomItem({indRoom,onDeleteRoom}) {
         );
     };
 
-export default RoomItem;
+export default RoomCard;

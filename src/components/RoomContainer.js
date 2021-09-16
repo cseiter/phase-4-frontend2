@@ -1,9 +1,9 @@
 import React from 'react';
-import RoomItem from './Room';
+import RoomCard from './Room';
 
 function RoomContainer( {rooms, onDeleteRoom}) {
-    const RoomItems = rooms.map((room) => (
-        <RoomItem
+    const RoomCards = rooms.map((room) => (
+        <RoomCard
             key={room.id}
             indRoom={room}
             onDeleteRoom={onDeleteRoom}
@@ -13,7 +13,7 @@ function RoomContainer( {rooms, onDeleteRoom}) {
     return (
         <section>
             <h1>Rooms</h1>
-            {RoomItems}
+            {RoomCards}
         </section>
     );
 }
