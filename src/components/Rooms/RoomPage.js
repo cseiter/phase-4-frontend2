@@ -23,8 +23,9 @@ function RoomPage() {
   return (
     <main>
       <header>
-        <RoomForm onAddRoom={handleAddRoom}/>
+        <h1>Rooms</h1>
       </header>
+      <RoomForm onAddRoom={handleAddRoom}/>
       <RoomContainer 
       rooms={rooms}
       onDeleteRoom={handleDeleteRoom}

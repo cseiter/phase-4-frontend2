@@ -33,7 +33,7 @@ function RoomForm({onAddRoom}) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h3>Add New Room</h3>
+                <h2>Add</h2>
                 <input 
                 type="text"
                 name="room"

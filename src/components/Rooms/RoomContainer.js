@@ -12,7 +12,7 @@ function RoomContainer( {rooms, onDeleteRoom}) {
 
     return (
         <section>
-            <h1>Rooms</h1>
+            <h2>Delete</h2>
             {RoomCards}
         </section>
     );
