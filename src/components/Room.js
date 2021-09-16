@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RoomItem({room,onDeleteRoom}) {
+function RoomItem({indRoom,onDeleteRoom}) {
     const {id,room} = indRoom;
 
     function handleDeleteClick() {
@@ -8,17 +8,17 @@ function RoomItem({room,onDeleteRoom}) {
             method: "DELETE",
     })
     .then((r) => r.json())
+    .then(console.log({id}))
     .then(() => {onDeleteRoom(indRoom);
     });
 }
 
-return (
-    <li>
-        <h4> Room {id}</h4>
-        <button onClick={handleDeleteClick}>Delete Room</button>
-        <h5>{room}</h5>
-    </li>
-);
-}
+    return (
+        <div>
+            <h4>{room}</h4>
+            <button onClick={handleDeleteClick}>Delete Room</button>
+        </div>
+        );
+    };
 
 export default RoomItem;

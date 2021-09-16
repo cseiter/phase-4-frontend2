@@ -1,27 +1,18 @@
-import React, {useEffect,useState} from 'react';
 import RoomItem from './Room';
 
-function RoomList({onDeleteRoom}) {
-    const [rooms,setRooms] = useState([]);
-    useEffect (() => {
-        fetch('https://radiant-waters-01618.herokuapp.com/rooms')
-        .then((r) => r.json())
-        .then((rooms) => {setRooms(rooms);
-        });
-    },[]);
-
-    const RoomItems = rooms.map((r) => (
+function RoomList( {rooms, onDeleteRoom}) {
+    const RoomItems = rooms.map((room) => (
         <RoomItem
-        key={r.id}
-        room = {r}
-        onDeleteRoom={onDeleteRoom}
+            key={room.id}
+            badge={room}
+            onDeleteRoom={onDeleteRoom}
         />
     ));
 
     return (
         <section>
             <h1>Rooms</h1>
-            <ul>{roomItems}</ul>
+            <ul>{RoomItems}</ul>
         </section>
     );
 }
