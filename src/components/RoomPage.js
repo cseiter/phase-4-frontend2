@@ -3,7 +3,7 @@ import RoomContainer from './RoomContainer';
 import RoomForm from './RoomForm';
 
 function RoomPage() {
-  const [showForm, setShowForm] = useState(false);
+//  const [showForm, setShowForm] = useState(false);
   const [rooms,setRooms] = useState([]);
 
   useEffect(() => {
