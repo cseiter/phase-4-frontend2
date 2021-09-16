@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import RoomList from './components/RoomList';
+import RoomContainer from './components/RoomContainer';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       Hello
       <main>
-        <RoomList 
+        <RoomContainer 
         rooms={rooms}
         onDeleteRoom={handleDeleteRoom}
         />
