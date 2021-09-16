@@ -18,7 +18,7 @@ function RoomForm({onAddRoom}) {
 
         const newRoom = {...formData};
 
-        fetch('https://radiant-waters-01618.herokuapp.com/rooms', {
+        fetch('https://radiant-waters-01618.herokuapp.com/rooms/', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -26,6 +26,7 @@ function RoomForm({onAddRoom}) {
             body: JSON.stringify(newRoom),
         })
         .then((r) => r.json())
+        .then(console.log({newRoom}))
         .then(onAddRoom);
     }
 
@@ -44,7 +45,7 @@ function RoomForm({onAddRoom}) {
                 <input 
                 type="submit"
                 name="submit"
-                value="Add Room"
+                value="Save Room"
                 />
             </form>
         </div>
