@@ -1,7 +1,7 @@
 import React from 'react';
 import RoomItem from './Room';
 
-function RoomList( {rooms, onDeleteRoom}) {
+function RoomContainer( {rooms, onDeleteRoom}) {
     const RoomItems = rooms.map((room) => (
         <RoomItem
             key={room.id}
@@ -18,4 +18,4 @@ function RoomList( {rooms, onDeleteRoom}) {
     );
 }
 
-export default RoomList;
+export default RoomContainer;
