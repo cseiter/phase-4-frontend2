@@ -1,3 +1,4 @@
+import React from 'react';
 import RoomItem from './Room';
 
 function RoomList( {rooms, onDeleteRoom}) {
