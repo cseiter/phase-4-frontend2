@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import RoomContainer from './RoomContainer';
+import RoomForm from './RoomForm';
 
 function RoomPage() {
-  // const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   const [rooms,setRooms] = useState([]);
 
   useEffect(() => {
@@ -11,9 +12,13 @@ function RoomPage() {
     .then(setRooms);
   },[]);
 
-//  function handleClick() {
-//    setShowForm((showForm) => !showForm);
-//  }
+  function handleClick() {
+    setShowForm((showForm) => !showForm);
+  }
+
+  function handleAddRoom(newRoom) {
+    setRooms([...rooms, newRoom]);
+  }
 
   function handleDeleteRoom(roomToDelete) {
     const updatedRooms = rooms.filter((room) => room.id !== roomToDelete.id);
@@ -22,6 +27,12 @@ function RoomPage() {
   
   return (
     <main>
+      <header>
+        {showForm ? <RoomForm onAddRoom={handleAddRoom} /> : null}
+        <div>
+          <button onClick={handleClick}>Add a room</button>
+        </div>
+      </header>
       <RoomContainer 
       rooms={rooms}
       onDeleteRoom={handleDeleteRoom}
