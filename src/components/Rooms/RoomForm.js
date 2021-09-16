@@ -43,9 +43,10 @@ function RoomForm({onAddRoom}) {
                 />
                 <br />
                 <input 
-                type="submit"
                 name="submit"
-                value="Save Room"
+                value="+"
+                type="button"
+                className="btn btn-warning btn-circle btn-xl"
                 />
             </form>
         </div>
