@@ -46,7 +46,7 @@ function RoomForm({onAddRoom}) {
                 <input 
                 name="submit"
                 value="+"
-                type="button"
+                type="submit"
                 className="btn btn-warning btn-circle btn-xl"
                 />
             </form>
