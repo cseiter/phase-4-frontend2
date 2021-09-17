@@ -1,4 +1,6 @@
 import React from 'react';
+import button from 'react-bootstrap/Button';
+import '../../App.css';
 
 function CategoryCard({indCategory,onDeleteCategory}) {
     const {id,category} = indCategory;
@@ -16,7 +18,7 @@ function CategoryCard({indCategory,onDeleteCategory}) {
     return (
         <div>
             <h4>{category}</h4>
-            <button onClick={handleDeleteClick}>Delete Category</button>
+            <button type="button" className="btn btn-warning btn-circle btn-xl" onClick={handleDeleteClick}>X</button>
         </div>
         );
     };
