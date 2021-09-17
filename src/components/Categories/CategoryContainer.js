@@ -5,14 +5,14 @@ function CategoryContainer( {categories, onDeleteCategory}) {
     const CategoryCards = categories.map((category) => (
         <CategoryCard
             key={category.id}
-            indCategory={category}
+            indRoom={category}
             onDeleteCategory={onDeleteCategory}
         />
     ));
 
     return (
         <section>
-            <h1>Categories</h1>
+            <h2>Delete</h2>
             {CategoryCards}
         </section>
     );
