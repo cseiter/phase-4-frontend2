@@ -7,6 +7,7 @@ function App() {
 
   return (
     <center>
+      <h1>Seiter Home Inventory Tracker</h1>
     <Router>
       <div>
         {/* <Link to="/">Home</Link> */}
