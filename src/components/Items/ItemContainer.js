@@ -5,7 +5,7 @@ function ItemContainer( {items, onDeleteItem}) {
     const ItemCards = items.map((item) => (
         <ItemCard
             key={item.id}
-            indItem={item_name}
+            indItem={item}
             onDeleteItem={onDeleteItem}
         />
     ));
