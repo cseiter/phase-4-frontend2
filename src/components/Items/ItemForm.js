@@ -6,6 +6,10 @@ function ItemForm({onAddItem}) {
         item_name: "",
         manufacturer: "",
         model: "",
+        serial_number: "",
+        conditions_id: "",
+        rooms_id: "",
+        categories_id: "",
     });
 
     function handleChange(e) {
@@ -58,6 +62,38 @@ function ItemForm({onAddItem}) {
                 onChange={handleChange}
                 value={formData.model}
                 placeholder="Enter model name"
+                />
+                <br />
+                <input
+                type="text"
+                name="serial_number"
+                onChange={handleChange}
+                value={formData.serial_number}
+                placeholder="Enter serial number"
+                />
+                <br />
+                <input
+                type="text"
+                name="conditions_id"
+                onChange={handleChange}
+                value={formData.conditions_id}
+                placeholder="Enter condition #"
+                />
+                <br />
+                <input
+                type="text"
+                name="rooms_id"
+                onChange={handleChange}
+                value={formData.rooms_id}
+                placeholder="Enter room #"
+                />
+                <br />
+                <input
+                type="text"
+                name="categories_id"
+                onChange={handleChange}
+                value={formData.categories_id}
+                placeholder="Enter category #"
                 />
                 <br />
                 <br />
