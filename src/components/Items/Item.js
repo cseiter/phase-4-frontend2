@@ -3,7 +3,7 @@ import button from 'react-bootstrap/Button';
 import '../../App.css';
 
 function ItemCard({indItem,onDeleteItem}) {
-    const {id,item_name,manufacturer,model,serial_number} = indItem;
+    const {id,item_name,manufacturer,model} = indItem;
 
     function handleDeleteClick() {
         fetch(`https://radiant-waters-01618.herokuapp.com/items/${id}`, {
@@ -18,7 +18,9 @@ function ItemCard({indItem,onDeleteItem}) {
     return (
         <div>
             <h4>{item_name}</h4>
+            <h2>{id}</h2>
             <table>
+                <tbody>
                 <tr>
                     <td>Manufacturer:</td>
                     <td>{manufacturer}</td>
@@ -27,10 +29,7 @@ function ItemCard({indItem,onDeleteItem}) {
                     <td>Model:</td>
                     <td>{model}</td>
                 </tr>
-                <tr>
-                    <td>Serial Number:</td>
-                    <td>{serial_number}</td>
-                </tr>
+                </tbody>
             </table>
             <button type="button" className="btn btn-warning btn-circle btn-xl" onClick={handleDeleteClick}>X</button>
         </div>
