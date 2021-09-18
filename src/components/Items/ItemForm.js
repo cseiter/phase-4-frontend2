@@ -15,6 +15,8 @@ function ItemForm({onAddItem}) {
         index_items_on_categories_id: "",
     });
 
+    const [valueCategory,setValueCategory] = useState('');
+
     function handleChange(e) {
         setFormData({
             ...formData,
@@ -41,6 +43,7 @@ function ItemForm({onAddItem}) {
 
     const handleCategorySelect=(e)=>{
         console.log(e);
+        setValueCategory(e);
     }
 
     return (
