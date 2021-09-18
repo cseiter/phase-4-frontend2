@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Dropdown} from 'react-bootstrap/Dropdown';
 
 function ItemForm({onAddItem}) {
 
@@ -95,6 +96,15 @@ function ItemForm({onAddItem}) {
                 value={formData.index_items_on_categories_id}
                 placeholder="Enter category #"
                 />
+                <DropdownButton
+                alignRight
+                title="Dropdown right"
+                id="dropdown-menu-align-right"
+                >
+                    <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
+                    <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
+                    <Dropdown.Item eventKey="option-3">option-3</Dropdown.Item>
+                    </DropdownButton>
                 <br />
                 <br />
                 <input 
