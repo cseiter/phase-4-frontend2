@@ -39,7 +39,7 @@ function ItemForm({onAddItem}) {
         .then(onAddItem);
     }
 
-    const handleSelect=(e)=>{
+    const handleCategorySelect=(e)=>{
         console.log(e);
     }
 
@@ -106,11 +106,13 @@ function ItemForm({onAddItem}) {
                 alignRight
                 title="Dropdown right"
                 id="dropdown-menu-align-right"
-                onSelect={handleSelect}
+                onSelect={handleCategorySelect}
                 >
-                    <Dropdown.Item eventKey="option-1-key">option-1</Dropdown.Item>
-                    <Dropdown.Item eventKey="option-2-key">option-2</Dropdown.Item>
-                    <Dropdown.Item eventKey="option-3-key">option-3</Dropdown.Item>
+                    <Dropdown.Item eventKey="7">Game Systems</Dropdown.Item>
+                    <Dropdown.Item eventKey="8">Appliances</Dropdown.Item>
+                    <Dropdown.Item eventKey="9">Furniture</Dropdown.Item>
+                    <Dropdown.Item eventKey="10">Dishes</Dropdown.Item>
+                    <Dropdown.Item eventKey="11">Games</Dropdown.Item>
                     </DropdownButton>
                 <br />
                 <br />
