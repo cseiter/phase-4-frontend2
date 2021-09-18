@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import {Dropdown} from 'react-bootstrap/Dropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function ItemForm({onAddItem}) {
 
@@ -35,6 +37,10 @@ function ItemForm({onAddItem}) {
         .then((r) => r.json())
         .then(console.log({newItem}))
         .then(onAddItem);
+    }
+
+    const handleSelect=(e)=>{
+        console.log(e);
     }
 
     return (
@@ -100,10 +106,11 @@ function ItemForm({onAddItem}) {
                 alignRight
                 title="Dropdown right"
                 id="dropdown-menu-align-right"
+                onSelect={handleSelect}
                 >
-                    <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
-                    <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
-                    <Dropdown.Item eventKey="option-3">option-3</Dropdown.Item>
+                    <Dropdown.Item eventKey="option-1-key">option-1</Dropdown.Item>
+                    <Dropdown.Item eventKey="option-2-key">option-2</Dropdown.Item>
+                    <Dropdown.Item eventKey="option-3-key">option-3</Dropdown.Item>
                     </DropdownButton>
                 <br />
                 <br />
