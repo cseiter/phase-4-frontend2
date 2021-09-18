@@ -7,9 +7,9 @@ function ItemForm({onAddItem}) {
         manufacturer: "",
         model: "",
         serial_number: "",
-        conditions_id: "",
-        rooms_id: "",
-        categories_id: "",
+        index_items_on_conditions_id: "",
+        index_items_on_rooms_id: "",
+        index_items_on_categories_id: "",
     });
 
     function handleChange(e) {
@@ -76,7 +76,7 @@ function ItemForm({onAddItem}) {
                 type="text"
                 name="conditions_id"
                 onChange={handleChange}
-                value={formData.conditions_id}
+                value={formData.index_items_on_conditions_id}
                 placeholder="Enter condition #"
                 />
                 <br />
@@ -84,7 +84,7 @@ function ItemForm({onAddItem}) {
                 type="text"
                 name="rooms_id"
                 onChange={handleChange}
-                value={formData.rooms_id}
+                value={formData.index_items_on_rooms_id}
                 placeholder="Enter room #"
                 />
                 <br />
@@ -92,7 +92,7 @@ function ItemForm({onAddItem}) {
                 type="text"
                 name="categories_id"
                 onChange={handleChange}
-                value={formData.categories_id}
+                value={formData.index_items_on_categories_id}
                 placeholder="Enter category #"
                 />
                 <br />
