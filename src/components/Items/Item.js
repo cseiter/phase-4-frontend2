@@ -18,7 +18,6 @@ function ItemCard({indItem,onDeleteItem}) {
     return (
         <div>
             <h4>{item_name}</h4>
-            <h2>{id}</h2>
             <table>
                 <tbody>
                 <tr>
