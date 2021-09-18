@@ -3,7 +3,9 @@ import React, {useState} from "react";
 function ItemForm({onAddItem}) {
 
     const [formData, setFormData] = useState({
-        item: "",
+        item_name: "",
+        manufacturer: "",
+        model: "",
     });
 
     function handleChange(e) {
