@@ -74,7 +74,7 @@ function ItemForm({onAddItem}) {
                 <br />
                 <input
                 type="text"
-                name="conditions_id"
+                name="index_items_on_conditions_id"
                 onChange={handleChange}
                 value={formData.index_items_on_conditions_id}
                 placeholder="Enter condition #"
@@ -82,7 +82,7 @@ function ItemForm({onAddItem}) {
                 <br />
                 <input
                 type="text"
-                name="rooms_id"
+                name="index_items_on_rooms_id"
                 onChange={handleChange}
                 value={formData.index_items_on_rooms_id}
                 placeholder="Enter room #"
@@ -90,7 +90,7 @@ function ItemForm({onAddItem}) {
                 <br />
                 <input
                 type="text"
-                name="categories_id"
+                name="index_items_on_categories_id"
                 onChange={handleChange}
                 value={formData.index_items_on_categories_id}
                 placeholder="Enter category #"
