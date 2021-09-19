@@ -4,6 +4,7 @@ import {Tabs, Tab} from "react-bootstrap";
 import RoomPage from './components/Rooms/RoomPage';
 import CategoryPage from './components/Categories/CategoryPage';
 import ItemPage from './components/Items/ItemPage';
+import HomePage from './components/HomePage';
 //import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
@@ -34,7 +35,10 @@ function App() {
         </Switch>
       </div>
     </Router> */}
-    <Tabs defaultActiveKey="items" fullWidth={true} indicatorColor="secondary" centered>
+    <Tabs defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
+      <Tab eventKey="home" title="Home">
+        <HomePage />
+      </Tab>
       <Tab eventKey="items" title="Items">
         <ItemPage />
       </Tab>
