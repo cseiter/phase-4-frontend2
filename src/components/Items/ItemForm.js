@@ -15,7 +15,7 @@ function ItemForm({onAddItem}) {
         index_items_on_categories_id: "",
     });
 
-    const [valueCategory,setValueCategory] = useState('');
+    //const [valueCategory,setValueCategory] = useState('');
 
     function handleChange(e) {
         setFormData({
@@ -41,10 +41,10 @@ function ItemForm({onAddItem}) {
         .then(onAddItem);
     }
 
-    const handleCategorySelect=(e)=>{
+/*     const handleCategorySelect=(e)=>{
         console.log(e);
         setValueCategory(e);
-    }
+    } */
 
     return (
         <div>
@@ -105,7 +105,7 @@ function ItemForm({onAddItem}) {
                 value={formData.index_items_on_categories_id}
                 placeholder="Enter category #"
                 />
-                <DropdownButton
+{/*                 <DropdownButton
                 alignRight
                 title="Dropdown right"
                 id="dropdown-menu-align-right"
@@ -116,7 +116,7 @@ function ItemForm({onAddItem}) {
                     <Dropdown.Item eventKey="9">Furniture</Dropdown.Item>
                     <Dropdown.Item eventKey="10">Dishes</Dropdown.Item>
                     <Dropdown.Item eventKey="11">Games</Dropdown.Item>
-                    </DropdownButton>
+                </DropdownButton> */}
                 <br />
                 <br />
                 <input 
