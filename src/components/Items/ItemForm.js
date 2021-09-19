@@ -123,7 +123,7 @@ function ItemForm({onAddItem}) {
                 name="submit"
                 value="+"
                 type="submit"
-                className="btn btn-warning btn-circle btn-xl"
+                className="btn btn-success"
                 />
             </form>
         </div>

@@ -40,7 +40,7 @@ function ItemCard({indItem,onDeleteItem}) {
                 </tr>
                 </tbody>
             </table>
-            <button type="button" className="btn btn-warning btn-circle btn-xl" onClick={handleDeleteClick}>X</button>
+            <button type="button" className="btn btn-danger" onClick={handleDeleteClick}>X</button>
         </div>
         );
     };
