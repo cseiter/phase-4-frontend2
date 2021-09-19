@@ -4,24 +4,24 @@ import {Tabs, Tab} from "react-bootstrap";
 import RoomPage from './components/Rooms/RoomPage';
 import CategoryPage from './components/Categories/CategoryPage';
 import ItemPage from './components/Items/ItemPage';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+//import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
 
   return (
     <center>
       <h1>Seiter Home Inventory Tracker</h1>
-    <Router>
+{/*     <Router>
       <div>
-        {/* <Link to="/">Home</Link> */}
+        <Link to="/">Home</Link>
         <Link to="/rooms">Rooms</Link>
         <Link to="/categories">Categories</Link>
         <Link to="/items">Items</Link>
 
         <Switch>
-{/*           <Route exact path="/">
+          <Route exact path="/">
             <Home />
-          </Route> */}
+          </Route>
           <Route exact path="/rooms">
             <RoomPage />
           </Route>
@@ -33,7 +33,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </Router> */}
     <Tabs defaultActiveKey="items" fullWidth={true} indicatorColor="secondary" centered>
       <Tab eventKey="items" title="Items">
         <ItemPage />
