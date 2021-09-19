@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import RoomPage from './components/Rooms/RoomPage';
 import CategoryPage from './components/Categories/CategoryPage';
 import ItemPage from './components/Items/ItemPage';
