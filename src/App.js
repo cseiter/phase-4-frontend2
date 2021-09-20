@@ -5,36 +5,13 @@ import RoomPage from './components/Rooms/RoomPage';
 import CategoryPage from './components/Categories/CategoryPage';
 import ItemPage from './components/Items/ItemPage';
 import HomePage from './components/HomePage';
-//import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
 
   return (
     <center>
       <h1>Seiter Home Inventory Tracker</h1>
-{/*     <Router>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/rooms">Rooms</Link>
-        <Link to="/categories">Categories</Link>
-        <Link to="/items">Items</Link>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/rooms">
-            <RoomPage />
-          </Route>
-          <Route exact path="/categories">
-            <CategoryPage />
-          </Route>
-          <Route exact path="/items">
-            <ItemPage />
-          </Route>
-        </Switch>
-      </div>
-    </Router> */}
     <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
       <Tab eventKey="home" title="Home">
         <HomePage />
@@ -50,11 +27,6 @@ function App() {
       </Tab>
     </Tabs>
     </center>
-
- /*    <div className="App">
-      <RoomPage />
-      <CategoryPage />
-    </div> */
   );
 }
 
