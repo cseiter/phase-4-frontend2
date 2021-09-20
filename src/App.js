@@ -35,7 +35,7 @@ function App() {
         </Switch>
       </div>
     </Router> */}
-    <Tabs defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
+    <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
       <Tab eventKey="home" title="Home">
         <HomePage />
       </Tab>
