@@ -10,7 +10,6 @@ function CategoryCard({indCategory,onDeleteCategory}) {
             method: "DELETE",
     })
     .then((r) => r.json())
-    .then(console.log({id}))
     .then(() => {onDeleteCategory(indCategory);
     });
 }

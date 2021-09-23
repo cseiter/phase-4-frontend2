@@ -10,9 +10,9 @@ function ItemForm({onAddItem}) {
         manufacturer: "",
         model: "",
         serial_number: "",
-        index_items_on_conditions_id: "",
-        index_items_on_rooms_id: "",
-        index_items_on_categories_id: "",
+        conditions_id: "",
+        rooms_id: "",
+        categories_id: "",
     });
 
     //const [valueCategory,setValueCategory] = useState('');
@@ -28,8 +28,9 @@ function ItemForm({onAddItem}) {
         e.preventDefault();
 
         const newItem = {...formData};
+        console.log(newItem);
 
-        fetch('https://radiant-waters-01618.herokuapp.com/items', {
+        fetch('http://127.0.0.1:3000/items', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -37,9 +38,8 @@ function ItemForm({onAddItem}) {
             body: JSON.stringify(newItem),
         })
         .then((r) => r.json())
-        .then(console.log({newItem}))
-        .then(onAddItem);
-    }
+        .then(onAddItem)
+     }
 
 /*     const handleCategorySelect=(e)=>{
         console.log(e);
@@ -84,25 +84,25 @@ function ItemForm({onAddItem}) {
                 <br />
                 <input
                 type="text"
-                name="index_items_on_conditions_id"
+                name="conditions_id"
                 onChange={handleChange}
-                value={formData.index_items_on_conditions_id}
+                value={formData.conditions_id}
                 placeholder="Enter condition #"
                 />
                 <br />
                 <input
                 type="text"
-                name="index_items_on_rooms_id"
+                name="rooms_id"
                 onChange={handleChange}
-                value={formData.index_items_on_rooms_id}
+                value={formData.rooms_id}
                 placeholder="Enter room #"
                 />
                 <br />
                 <input
                 type="text"
-                name="index_items_on_categories_id"
+                name="categories_id"
                 onChange={handleChange}
-                value={formData.index_items_on_categories_id}
+                value={formData.icategories_id}
                 placeholder="Enter category #"
                 />
 {/*                 <DropdownButton
